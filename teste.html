@@ -1,0 +1,42 @@
+<html>
+<script>
+  /*var alvo = '11a22b33c';
+  var exp = /(\d\d)(\w)/g; //aplicar pattern globalmente
+  var resultado = null;
+  while(resultado = exp.exec(alvo)){ //exec: executa apenas uma vez
+    console.log(resultado);
+    console.log(exp.lastIndex);
+  }*/
+
+  var anoMesDia = '2007-12-31';
+
+  var exp = /-/g;
+
+  anoMesDia = anoMesDia.replace(exp, '/');
+
+  console.log(anoMesDia);
+
+
+  var arquivo = '100,200-150,200;20';
+  var exp1 = /[-;,]/;
+  var valores = arquivo.split(exp1);
+  console.log(valores);
+
+  var codigos = 'A121B12112C12212F12G01';
+  var exp2 = /[A-Za-z]\d+/g;
+  var codigosExtraidos = codigos.match(exp2);
+  console.log(codigosExtraidos);
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Testando pattern</title>
+</head>
+<body>
+    <form>
+        <input pattern="[0-9]*">
+        <input type="submit" value="Enviar dados">
+    </form>
+</body>
+
+</html>
